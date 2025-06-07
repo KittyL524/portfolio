@@ -8,13 +8,22 @@
 </head>
 
 <body>
-    <div class="menuV">
-        <ul class="container">
-            <a href="/index.html">Home</a>
-            <a href="https://github.com/MangoMilky">Profile</a>
-            <a href="/visualizations.html">Visualizations</a> 
-        </ul>
-    </div> <!--nav bar-->
+    <div class="page-container">
+        <!-- 左侧菜单栏 -->
+        <nav class="sidebar">
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="visualization.html">Project</a></li>
+                </ul>
+            </div>
+            
+            <div class="contact-info">
+                <p>Kitty Liu</p>
+                <p>778.316.9486</p>
+                <p>kittyl52499@gmail.com</p>
+            </div>
+        </nav>
 
     <header>
         <h1>Visualizations</h1>
@@ -41,7 +50,7 @@
 
     </main>
 
-
+    </div>
     <script src="vis.js"></script>
 </body>
 </html>

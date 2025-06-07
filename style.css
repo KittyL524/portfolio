@@ -9,19 +9,24 @@ body {
 .page-container {
   display: flex;
   min-height: 100vh;
+  padding-left: 216px;
 }
 
 /* 左侧菜单栏样式 */
 .sidebar {
-  width: 216px; 
+  width: 216px;
   background-color: #00465e;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 2rem 1.5rem; 
-  position: relative;
-  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  height: 100vh; 
+  box-sizing: border-box; 
+  overflow-y: auto; 
+  position: fixed; 
+  overflow: hidden;
+  left: 0;
+  top: 0;
 }
 
 .nav-center {
@@ -66,7 +71,7 @@ body {
   font-size: 0.9rem;
   width: 100%;
   position: absolute;
-  top: 80%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -77,28 +82,72 @@ body {
 }
 
 /* 主内容区样式 */
+@media (max-width: 600px) {
+  .description {
+      text-align: left;
+      hyphens: none;
+  }
+}
+
 .content-area {
   flex: 1;
   padding: 2rem;
+  height: 100vh;
+  overflow-y: auto;
   background-color: #f6f9f5;
+  background-image: url('images/home.png');
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+}
+
+.content-card {
+  background-color: rgba(246, 249, 245, 0.85);
+  border-radius: 16px;
+  padding: 3rem 4rem; /* 增加左右内边距 */
+  max-width: 680px; 
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0, 70, 94, 0.1);
+}
+
+.name-title {
+  color: #00465e;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description {
+  color: #00465e;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin: 0 auto;
+  text-align: center; 
+  max-width: 580px; /* 控制文本宽度 */
+  padding: 0 1rem; /* 保证两侧留白 */
 }
 
 header {
-  background-color: #1ebaea;
+  background-color: rgba(30, 186, 234, 0.9);
   color: white;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
-  font-weight: bold;
   margin-bottom: 2rem;
 }
 
 header h1 {
   margin-bottom: 0.5rem;
+  font-size: 2.5rem;
 }
 
 header h2 {
   font-weight: normal;
   margin-top: 0;
+  font-size: 1.5rem;
 }
 
 .main-content {
