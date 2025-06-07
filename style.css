@@ -1,62 +1,114 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
-a {
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    font-weight: bold;
-    color: #074873;
-  }
+.page-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* 左侧菜单栏样式 */
+.sidebar {
+  width: 216px; 
+  background-color: #00465e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1.5rem; 
+  position: relative;
+  min-height: 100vh;
+}
+
+.nav-center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.nav-links li {
+  margin-bottom: 2rem;
+}
+
+.nav-links a {
+  color: #f6f9f5;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 1rem 0; 
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  font-size: 2rem; 
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-info {
+  color: #f6f9f5;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 100%;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+/* 主内容区样式 */
+.content-area {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f6f9f5;
+}
 
 header {
-    background-color: #1ebaea;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    font-weight: bold;
-    /* margin-top: 30px; */
+  background-color: #1ebaea;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
-  .menuH .container {
-    background-color: #1ebaea;
-    color: white;
-    display: flex;
-    padding: 2rem;
-    margin: 0;
-    place-content: space-between;
-  }
-
-  .menuV .container {
-    background-color: #1ebaea;
-    color: white;
-    display: flex;
-    padding: 2rem;
-    margin: 0;
-    place-content: space-between;
-  }
-
-main {
-    color: #074873;
-    padding: 2rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 3px;
+header h1 {
+  margin-bottom: 0.5rem;
 }
 
-footer {
-    background-color: #1ebaea;
-    color: #074873;
-    padding: 2rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+header h2 {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.main-content {
+  color: #333;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.main-content strong {
+  color: #00465e;
 }
