@@ -1,0 +1,104 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* 允许全局滚动 */
+}
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+/* 主内容区 */
+.content-area {
+    padding: 1rem 108px;
+    background-image: url('images/menu.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: local; 
+    overflow-y: auto;
+    flex: 1;
+    min-height: 100vh;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: row; 
+    margin-bottom: 1.5rem;
+    background-color: rgba(246, 249, 245, 0.85);
+    border-radius: 16px;
+    padding: 1.5rem;
+    min-height: 220px;
+    align-items: center;
+    flex-wrap: nowrap; 
+    overflow: visible; 
+}
+
+.project-image {
+    width: 320px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 2rem;
+    flex-shrink: 0; 
+    display: block; 
+    position: static; 
+}
+
+.project-content {
+    flex: 1;
+    padding-right: 1rem;
+    min-width: 0; 
+}
+.project-title {
+    color: #00465e;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.project-description p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
+}
+
+.project-item:last-child {
+    margin-bottom: 100px;
+}
+
+/* 按钮 */
+.more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00465e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: background-color 0.3s;
+}
+
+.more:hover {
+    background-color: #1ebaea;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .content-area {
+        padding: 1rem 54px; /* 小屏幕减少边距 */
+    }
+    
+    .project-item {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+}
