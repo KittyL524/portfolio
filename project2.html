@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Immerself</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+  <div class="page-container">
+    <!-- 新增左侧菜单栏 -->
+    <nav class="project-sidebar">
+        <a href="menu.html" class="back-button">← Back</a>
+        
+        <div class="nav-container">
+          <ul class="project-nav">
+            <li><a href="#overall">OVERALL</a></li>
+            <li><a href="#my-role">MY ROLE</a></li>
+            <li><a href="#concept">CONCEPT</a></li>
+            <li><a href="#process">PROCESS</a></li>
+            <li><a href="#final-thoughts">FINAL THOUGHTS</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    <main class="project-container">
+        <div id="top"></div>
+        <section id="overall" class="intro">
+            <div class="title-block">
+            <p class="course">IAT 343 Project02</p>
+            <h1>THE <br> APARTMENT</h1>
+            </div>
+            <div class="desc-block">
+            <p>This school group project involved 4 people making a choice-based narrative pixel game...</p>
+            </div>
+        </section>
+
+        <div class="video-placeholder">[Video Placeholder]</div>
+        <p class="caption">Presentation about Game</p>
+
+        <section class="info-grid">
+            <div><strong>TEAM</strong><br>Renee Sun, Niko Shyu, Jessy Huang, Kitty Liu</div>
+            <div><strong>TOOLS</strong><br>Unity, ROOM BUILDER, Procreate</div>
+            <div><strong>ROLE</strong><br>Game Development, Illustrator</div>
+            <div><strong>TIME</strong><br>Spring 2023, 4 weeks</div>
+        </section>
+
+        <section id="my-role">
+            <h2 class="section-title">MY ROLE</h2>
+            <p>In this project, my main role was to build the game in Unity. I also made the UI and helped with the storyline...</p>
+        </section>
+
+        <section id="concept">
+            <h2 class="section-title">CONCEPT</h2>
+            <p>[Image Placeholder: Initial Game Screenshot]</p>
+            <p>Our initial project requirements were to make a work with a script written by us... We deleted the 3D part.</p>
+        </section>
+
+        <section id="process">
+            <h2 class="section-title">PROCESS</h2>
+            <p>[Image Placeholder: Code Screenshot]</p>
+            <p>We first made a narrative game with multi-choice for the player... I used a plugin called Fungus to help.</p>
+        </section>
+
+        <section id="final-thoughts">
+            <h2 class="section-title">FINAL THOUGHTS</h2>
+            <p>This project helped me grow as a developer and storyteller. I learned how to work in a team, communicate ideas, and adapt designs...</p>
+        </section>
+
+        <div class="back-to-top">
+            <a href="#top">Back to Top ↑</a>
+        </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Kitty Liu</p>
+      <p>778.316.9486</p>
+      <p>yla663@sfu.ca</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll(".section-title");
+      const navLinks = document.querySelectorAll(".project-nav li a");
+  
+      function onScroll() {
+        let scrollPosition = window.scrollY || window.pageYOffset;
+  
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 80; // 留点缓冲空间
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute("id");
+  
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
+            navLinks.forEach((link) => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === "#" + sectionId) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+      }
+  
+      window.addEventListener("scroll", onScroll);
+    });
+  </script>  
+</body>
+</html>
