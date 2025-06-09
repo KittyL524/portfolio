@@ -263,6 +263,22 @@ footer p {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+.video-container2 {
+    position: relative;
+    width: 100%;
+    max-width: 960px; /* 可根据你页面布局调整最大宽度 */
+    margin: 0 auto;
+  }
+  
+  .video-container2 video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
