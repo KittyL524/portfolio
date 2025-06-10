@@ -2,7 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: auto; /* 允许全局滚动 */
+    overflow: hidden;
 }
 
 .page-container {
