@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interastral Merchant</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+  <div class="page-container">
+    <!-- 新增左侧菜单栏 -->
+    <nav class="project-sidebar">
+        <a href="menu.html" class="back-button">← Back</a>
+        
+        <div class="nav-container">
+          <ul class="project-nav">
+            <li><a href="#overall">MODELS</a></li>
+            <!--<li><a href="#my-role">MY ROLE</a></li>
+            <li><a href="#concept">CONCEPT</a></li>
+            <li><a href="#process">PROCESS</a></li>
+            <li><a href="#final-thoughts">FINAL THOUGHTS</a></li>-->
+          </ul>
+        </div>
+      </nav>
+
+    <main class="project-container">
+        <div id="top"></div>
+        <section id="overall" class="intro">
+            <div class="title-block">
+            <h1>Visual Works </h1>
+            </div>
+            <div class="desc-block">
+            <p style="text-align: right;"><br>An overall portfolio of my visual works.</p>
+            </div>
+        </section>
+        
+        <section id="my-role">
+            <div class="title-block">
+            <h2 class="section-title">3D Models</h2>
+            </div>
+            <div class="project-image-container">
+                <img src="images/m01.png" alt="Screenshot 01" class="project-detail-image">
+            </div>
+            <div class="image-grid-layout">
+                <div class="left-column">
+                  <img src="images/m02.png" alt="Screenshot 02">
+                  <img src="images/m03.png" alt="Screenshot 03">
+                </div>
+                <div class="right-column">
+                  <img src="images/m04.png" alt="Screenshot 04">
+                  <img src="images/m05.png" alt="Screenshot 05">
+                </div>
+            </div>
+            <p><br>updating...</p>
+            </div>
+        </section>
+
+        <div class="back-to-top">
+            <a href="#top">Back to Top ↑</a>
+        </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Kitty Liu</p>
+      <p>778.316.9486</p>
+      <p>kittyl52499@gmail.com</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll(".section-title");
+      const navLinks = document.querySelectorAll(".project-nav li a");
+  
+      function onScroll() {
+        let scrollPosition = window.scrollY || window.pageYOffset;
+  
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 80; // 留点缓冲空间
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute("id");
+  
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
+            navLinks.forEach((link) => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === "#" + sectionId) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+      }
+  
+      window.addEventListener("scroll", onScroll);
+    });
+  </script>  
+</body>
+</html>
